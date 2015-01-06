@@ -1,11 +1,17 @@
+class LulzGreeter
+  def greet
+    "OH HAI CUCUMNER!"
+  end
+end
+
 Given(/^a lulz greeter$/) do
-  pending # express the regexp above with the code you wish you had
+ @greeter = LulzGreeter.new
 end
 
 When(/^I send it the greet message$/) do
-  pending # express the regexp above with the code you wish you had
+  @message = @greeter.greet
 end
 
-Then(/^I should see "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see "(.*?)"$/) do |lulzy_greeting|
+  expect(@message).to eq lulzy_greeting
 end
